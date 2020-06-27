@@ -13,9 +13,7 @@ describe("Create and mark-unmark as favorite", () => {
   });
 
   it("Creat a post", () => {
-    // cy.contains("New Post").click();
     cy.get("ul.navbar-nav").children().contains("New Post").click();
-
     cy.hash().should("include", "#/editor");
     cy.get("form").within(($form) => {
       cy.get("input").first().type("Test");
