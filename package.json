@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean:reports": "rm -rf cypress/reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "yarn combine-reports && npm run generate-report",
+    "pretest": "yarn clean:reports",
+    "scripts": "cypress run",
     "start": "cypress open",
-    "test": "cypress run --spec 'cypress/integration/QAM/TC06_aliases.spec.js'"
+    "test": "yarn scripts || yarn posttest"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +21,11 @@
   },
   "devDependencies": {
     "cypress-file-upload": "^4.0.7",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
     "prettier": "^2.0.5"
   }
 }
