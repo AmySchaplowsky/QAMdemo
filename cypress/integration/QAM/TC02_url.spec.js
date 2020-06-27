@@ -4,7 +4,7 @@ describe("Create and mark-unmark as favorite", () => {
     cy.title().should("eq", "Conduit");
     cy.location("protocol").should("eq", "https:");
     cy.get("input[type='email']").type("amy.schaplowsky@gmail.com");
-    cy.get("input[type='password']").type(atob("VG9kYXkxMjMh"));
+    cy.get("input[type='password']").type(atob("Mi01ITBOPV47ITUhfDozfjp2Oi4ufGheSjYrKzl4PTpvKl5NRTVTIT0qfD03XyE9OCEtJXxvdDowOnYuLX4rODp6OUE7fF9z"));
     cy.get(".btn").contains("Sign in").should("be.visible").click();
     cy.contains("Your Feed", { timeout: 10000 }).should("be.visible");
   });
