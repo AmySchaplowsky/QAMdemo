@@ -1,18 +1,18 @@
 {
-	"name": "QAMdemo",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "cypress open"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"cypress": "^4.9.0"
-	},
-	"devDependencies": {
-		"prettier": "^2.0.5"
-	}
+  "name": "QAMdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.9.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
 }
