@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cypress open"
+    "start": "cypress open",
+    "test": "cypress run --spec 'cypress/integration/QAM/TC06_aliases.spec.js'"
   },
   "keywords": [],
   "author": "",
