@@ -4,7 +4,11 @@ describe("Create and mark-unmark as favorite", () => {
     cy.title().should("eq", "Conduit");
     cy.location("protocol").should("eq", "https:");
     cy.get("input[type='email']").type("amy.schaplowsky@gmail.com");
-    cy.get("input[type='password']").type(atob("Mi01ITBOPV47ITUhfDozfjp2Oi4ufGheSjYrKzl4PTpvKl5NRTVTIT0qfD03XyE9OCEtJXxvdDowOnYuLX4rODp6OUE7fF9z"));
+    cy.get("input[type='password']").type(
+      atob(
+        "Mi01ITBOPV47ITUhfDozfjp2Oi4ufGheSjYrKzl4PTpvKl5NRTVTIT0qfD03XyE9OCEtJXxvdDowOnYuLX4rODp6OUE7fF9z"
+      )
+    );
     cy.get(".btn").contains("Sign in").should("be.visible").click();
     cy.contains("Your Feed", { timeout: 10000 }).should("be.visible");
   });
@@ -14,7 +18,7 @@ describe("Create and mark-unmark as favorite", () => {
     cy.hash().should("include", "#/editor");
     // cy.location("hash").should("include", "#/editor");
     cy.get("input[placeholder='Article Title']").type("Test");
-    cy.get("input[placeholder=\"What's this article about?\"]").type("Test 1");
+    cy.get('input[placeholder="What\'s this article about?"]').type("Test 1");
     cy.get("textarea[placeholder='Write your article (in markdown)']").type(
       "Test 2"
     );
