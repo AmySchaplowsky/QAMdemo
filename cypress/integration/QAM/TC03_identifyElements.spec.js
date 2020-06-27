@@ -14,7 +14,7 @@ describe("Create and mark-unmark as favorite", () => {
     cy.hash().should("include", "#/editor");
     // cy.location("hash").should("include", "#/editor");
     cy.get("input[placeholder='Article Title']").type("Test");
-    cy.get("input[placeholder=\"What's this article about?\"]").type("Test 1");
+    cy.get('input[placeholder="What\'s this article about?"]').type("Test 1");
     cy.get("textarea[placeholder='Write your article (in markdown)']").type(
       "Test 2"
     );
