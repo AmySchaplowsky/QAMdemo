@@ -1,4 +1,4 @@
-import Login from "../pageObjects/login";
+import { Login } from "../pageObjects";
 
 describe("Login", () => {
   it("Sign in", () => {

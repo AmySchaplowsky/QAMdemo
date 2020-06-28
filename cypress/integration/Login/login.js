@@ -1,4 +1,4 @@
-import Login from "../pageObjects/login";
+import { Login } from "../pageObjects";
 
 Given("I open Conduit login page", () => {
   cy.visit("/#/login");

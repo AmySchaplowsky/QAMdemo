@@ -1,4 +1,4 @@
-export default class login {
+export class Login {
   email() {
     return cy.get("input[type='email']");
   }
